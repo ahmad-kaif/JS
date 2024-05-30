@@ -1,5 +1,6 @@
 //singleton
-//Object.create()
+//Object.create() 
+//let obj - new Object() //--- singleton object
 
 //object literals 
 //keys : values
