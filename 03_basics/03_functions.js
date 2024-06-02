@@ -22,6 +22,7 @@ const user = {
 
 
 //----------------arrow function ------------
+// ()=>{}
 // const chai = ()=>{
 //     let username = "ahmad";
 //     // console.log(this.username); // gives - undefined
