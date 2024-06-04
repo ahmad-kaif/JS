@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <div >
+        <ul class="langs">
+            <li>JavaScript</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // we will write a function to add further languages below js
+    function addlangs(lang){
+        const li = document.createElement('li')
+        document.querySelector('.langs').appendChild(li)
+        li.innerHTML = `${lang}`
+    }
+    addlangs("Python");
+    addlangs("ruby on Rails");
+
+    // more optimised way
+    function addlangs(lang){
+        const li = document.createElement('li');
+        document.querySelector('.langs').appendChild(li)
+        li.append(document.createTextNode(lang))
+    }
+    addlangs("Golang")
+    addlangs("TypeScript")
+
+    // edit
+    const scChild = document.querySelector('li:nth-child(2)')
+    // scChild.innerHTML="C#"
+    const newLi = document.createElement('li');
+    newLi.textContent = "C#";
+    scChild.replaceWith(newLi);
+
+    //remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove();
+</script>
+</html>
