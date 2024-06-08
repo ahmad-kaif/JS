@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeOut in JS</title>
+  </head>
+  <body>
+    <h1>Ahmad Kaif</h1>
+    <button id="stop">STOP</button>
+    <button id="start">START</button>
+
+    <script>
+        // setInterval() and clearInterval()
+        let arr = ['Coder','Developer','Problem Solver','Rapper'];
+        index = 0;
+        const change_text = function() {
+            document.querySelector("h1").innerHTML = arr[index];
+            index = (index + 1) % arr.length; 
+            console.log("text is changing");
+        }
+        const stop_interval = setInterval(change_text, 1500);
+
+        document.querySelector("#stop").addEventListener("click", function () {
+          clearInterval(stop_interval);
+          console.log("text has stopped changing");
+        });
+
+        document.querySelector("#start").addEventListener("click", function () {
+          setInterval(change_text, 1500);
+          console.log(`text has again started changing`);
+        });
+    </script>
+  </body>
+</html>
